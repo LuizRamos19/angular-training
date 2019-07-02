@@ -1,0 +1,12 @@
+<h1>Hello World</h1>
+
+<i *ngIf="title === 'Ramos'">{{title}}</i>
+<br>
+<app-count></app-count>
+
+<button (click)="newItem()" class="btn btn-primary">Novo nome</button>
+<ol>
+    <li *ngFor="let item of items">
+        <app-todo-item [data]="item"></app-todo-item>
+    </li>
+</ol>
