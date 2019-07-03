@@ -1,0 +1,32 @@
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+input.ng-valid.ng-touched {
+    border: 1px solid rgb(122, 209, 122);
+}
+
+.field, button {
+    margin: 10px 10px 10px 30px;
+    width: 300px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid #d0d0d0;
+}
+
+.errors {
+    font-size: 13px;
+    color: red;
+}
+
+.btn-primary {
+    background-color: green;
+    border-color: green;
+}

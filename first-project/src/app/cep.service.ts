@@ -9,7 +9,7 @@ export class CepService {
 
     constructor(private httpClient: HttpClient) { }
 
-    getCep(cep: string) {
+    getCep(cep: String) {
         return this.httpClient.get(`${this.URL}${cep}/json`);
     }
 }

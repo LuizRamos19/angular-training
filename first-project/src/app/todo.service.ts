@@ -17,6 +17,10 @@ export class TodoService {
         return this.httpClient.get<Todo[]>(this.URL);
     }
 
+    addTodo(todo: Todo) {
+        return this.httpClient.post(this.URL, todo);
+    }
+
     increase() {
         this.pCount.next(this.pCount.value + 1);
     }
