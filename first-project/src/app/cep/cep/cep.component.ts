@@ -14,11 +14,15 @@ export class CepComponent implements OnInit {
     constructor(public cepService: CepService, private activatedRoute: ActivatedRoute) { }
 
     ngOnInit() {
-        this.activatedRoute.params.subscribe(params => {
-            this.cepService.getCep(params.cep).subscribe(value => {
-                this.cep = value;
-                console.log(this.cep)
-            });
+        this.activatedRoute.params.subscribe(params => {    //Pega os parâmetros que vieram da URL
+            this.cepService.getCep(params.cep).subscribe(
+                value => {
+                    this.cep = value;
+                    console.log(this.cep)
+                },
+                error => {
+                    console.log(error)
+                });
         });
 
     }

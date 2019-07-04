@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Todo } from '../typings/todo';
+import { Todo } from '../../typings/todo';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({

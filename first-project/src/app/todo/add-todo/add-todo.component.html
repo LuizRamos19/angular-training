@@ -1,5 +1,4 @@
 <form #form="ngForm">
-    {{ todo | json}}
     <div class="field">
         <label>Título</label>
         <input type="text" name="title" [(ngModel)]="todo.title" #title="ngModel" required>

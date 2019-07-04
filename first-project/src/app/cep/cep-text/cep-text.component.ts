@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CepService } from '../cep.service';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'app-cep-text',
@@ -18,8 +17,12 @@ export class CepTextComponent implements OnInit {
     }
 
     searchCep() {
-        this.cepService.getCep(this.cepText).subscribe(value => {
-            this.cep = value;
-        });
+        this.cepService.getCep(this.cepText).subscribe(
+            value => {
+                this.cep = value;
+            },
+            error => {
+                console.log(error)
+            });
     }
 }
