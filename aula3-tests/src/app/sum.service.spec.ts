@@ -1,0 +1,17 @@
+import { TestBed } from '@angular/core/testing';
+
+import { SumService } from './sum.service';
+
+describe('SumService', () => {
+    beforeEach(() => TestBed.configureTestingModule({}));
+
+    it('should be created', () => {
+        const service: SumService = TestBed.get(SumService);
+        expect(service).toBeTruthy();
+    });
+
+    it('deve retornar 7', () => {
+        const service: SumService = TestBed.get(SumService);
+        expect(service.sum(2, 5)).toBe(7);
+    });
+});
