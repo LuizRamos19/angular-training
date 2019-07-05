@@ -1,8 +1,13 @@
-<app-count></app-count>
+<!-- <app-count></app-count>
 <b>App: </b>{{ count }}
-<app-count-button></app-count-button>
+<app-count-button></app-count-button> -->
+<div *ngIf="email !== ''">
+    Olá, {{ email }}
+</div>
 <br>
 <br>
+<a routerLink="/auth/login">Login</a> |
+<a routerLink="/auth/register">Registrar</a> |
 <a routerLink="/">Home</a> |
 <a routerLink="/todos">Todos</a> |
 <a routerLink="/cep">Cep</a> |

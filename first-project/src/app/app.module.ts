@@ -13,7 +13,8 @@ const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'todos', loadChildren: () => import('./todo/todo.module').then(m => m.TodoModule) },    //esse é o lazy loading de rotas
     //loadChildren: './todo/todo.module#TodoListComponent' //Assim era no Angular 7 pra trás
-    { path: 'cep', loadChildren: () => import('./cep/cep.module').then(m => m.CepModule) }
+    { path: 'cep', loadChildren: () => import('./cep/cep.module').then(m => m.CepModule) },
+    { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) }
 ];
 
 @NgModule({
