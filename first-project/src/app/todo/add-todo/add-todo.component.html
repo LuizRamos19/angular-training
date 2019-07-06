@@ -33,5 +33,5 @@
         <label>Finalizado?</label>
         <input type="checkbox" name="finished" [(ngModel)]="todo.finished" #finished="ngModel" value="true">
     </div>
-    <button class="btn btn-primary" [disabled]="form.invalid" (click)="addTodo()">Adicionar</button>
+    <button class="btn btn-primary" [disabled]="form.invalid" (click)="addTodo()">{{ buttonName }}</button>
 </form>

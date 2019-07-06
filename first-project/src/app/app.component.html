@@ -1,16 +1,30 @@
 <!-- <app-count></app-count>
 <b>App: </b>{{ count }}
 <app-count-button></app-count-button> -->
-<div *ngIf="email !== ''">
-    Olá, {{ email }}
+<div *ngIf="user$ | async; else notLogged">
+    <div class="header">
+        <nav>
+            <a routerLink="/">Home</a>
+            <a routerLink="/todos">Todos</a>
+            <a routerLink="/todos/add">Add Todo</a>
+            <a routerLink="/auth/login">Login</a>
+            <a routerLink="/auth/register">Cadastro</a>
+            <a routerLink="/cep">Cep</a>
+        </nav>
+        <div class="user">
+            Olá, {{ (user$ | async).email }}
+            <button (click)="logout()">Logout</button>
+        </div>
+    </div>
 </div>
-<br>
-<br>
-<a routerLink="/auth/login">Login</a> |
-<a routerLink="/auth/register">Registrar</a> |
-<a routerLink="/">Home</a> |
-<a routerLink="/todos">Todos</a> |
-<a routerLink="/cep">Cep</a> |
-<a routerLink="/todos/add">Add Todo</a>
-<br><br>
+<ng-template #notLogged>
+    <div class="header">
+        <nav>
+            <a routerLink="/">Home</a>
+            <a routerLink="/auth/login">Login</a>
+            <a routerLink="/auth/register">Cadastro</a>
+            <a routerLink="/cep">Cep</a>
+        </nav>
+    </div>
+</ng-template>
 <router-outlet></router-outlet>

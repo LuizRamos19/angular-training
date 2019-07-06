@@ -21,8 +21,10 @@ export class LoginComponent implements OnInit {
             (value: any) => {
                 console.log("Usuário logado com sucesso");
                 localStorage.setItem('token', value.idToken);
-                this.authService.setUser(
-                    { email: value.email }
+                this.authService.setUser({
+                    id: value.localId,
+                    email: value.email
+                }
                 );
             },
             error => {

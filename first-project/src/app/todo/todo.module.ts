@@ -11,7 +11,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
     { path: '', component: TodoListComponent },
-    { path: 'add', component: AddTodoComponent }
+    { path: 'add', component: AddTodoComponent },
+    { path: ':id', component: AddTodoComponent }
 ];
 
 @NgModule({
