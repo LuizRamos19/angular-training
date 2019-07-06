@@ -1,9 +1,0 @@
-<h1>Mensagens</h1>
-
-<div *ngFor="let message of messages">
-    <p>ID: {{ message.id }}</p>
-    <p>Texto: {{ message.text }}</p>
-    <p>Enviado em: {{ message.created | date: 'dd/MM/yyyy HH:mm:ss'}}</p>
-    <button (click)="deleteMessage(message.id)">Deletar</button>
-    <hr>
-</div>
