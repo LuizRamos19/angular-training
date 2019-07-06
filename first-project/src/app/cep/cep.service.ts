@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
     providedIn: 'root'
 })
 export class CepService {
-    readonly URL = 'http://viacep.com.br/ws/';
+    readonly URL = 'https://viacep.com.br/ws/';
 
     constructor(private httpClient: HttpClient) { }
 
